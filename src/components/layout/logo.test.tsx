@@ -1,0 +1,43 @@
+import { describe, it, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import { Logo } from "./logo";
+
+describe("Logo component", () => {
+  it("renders with text by default", () => {
+    render(<Logo />);
+    expect(screen.getByText("Sage")).toBeInTheDocument();
+    expect(screen.getByText("Syn")).toBeInTheDocument();
+  });
+
+  it("renders without text when showText is false", () => {
+    render(<Logo showText={false} />);
+    expect(screen.queryByText("Sage")).not.toBeInTheDocument();
+    expect(screen.queryByText("Syn")).not.toBeInTheDocument();
+  });
+
+  it("renders SVG logo mark", () => {
+    render(<Logo />);
+    const svg = document.querySelector("svg");
+    expect(svg).toBeInTheDocument();
+    expect(svg).toHaveAttribute("viewBox", "0 0 40 40");
+  });
+
+  it("applies custom className", () => {
+    render(<Logo className="custom-class" />);
+    const container = document.querySelector(".custom-class");
+    expect(container).toBeInTheDocument();
+  });
+
+  it("contains gradient definition for logo", () => {
+    render(<Logo />);
+    const gradient = document.querySelector("#logoGradient");
+    expect(gradient).toBeInTheDocument();
+  });
+
+  it("renders agent nodes in the mesh", () => {
+    render(<Logo />);
+    const circles = document.querySelectorAll("circle");
+    // 1 center node + 6 outer nodes = 7 total
+    expect(circles.length).toBe(7);
+  });
+});
