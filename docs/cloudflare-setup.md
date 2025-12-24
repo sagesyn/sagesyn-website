@@ -313,12 +313,12 @@ jobs:
 
 Verify all URLs work correctly:
 
-| URL                       | Expected Result                    |
-| ------------------------- | ---------------------------------- |
-| `https://sagesyn.ai`      | Shows the website                  |
-| `https://www.sagesyn.ai`  | Redirects to `https://sagesyn.ai`  |
-| `https://sagesyn.com`     | Redirects to `https://sagesyn.ai`  |
-| `https://www.sagesyn.com` | Redirects to `https://sagesyn.ai`  |
+| URL                       | Expected Result                   |
+| ------------------------- | --------------------------------- |
+| `https://sagesyn.ai`      | Shows the website                 |
+| `https://www.sagesyn.ai`  | Redirects to `https://sagesyn.ai` |
+| `https://sagesyn.com`     | Redirects to `https://sagesyn.ai` |
+| `https://www.sagesyn.com` | Redirects to `https://sagesyn.ai` |
 
 ### 7.3 Check SSL Certificates
 
@@ -419,12 +419,12 @@ npx wrangler pages project create sagesyn-website --production-branch=main
 
 ### URLs
 
-| Service          | URL                                           |
-| ---------------- | --------------------------------------------- |
-| Production       | `https://sagesyn.ai`                          |
-| Pages Preview    | `https://[hash].sagesyn-website.pages.dev`    |
-| Pages Dashboard  | `https://dash.cloudflare.com` → Workers & Pages |
-| GitHub Repo      | `https://github.com/sagesyn/sagesyn-website`  |
+| Service         | URL                                             |
+| --------------- | ----------------------------------------------- |
+| Production      | `https://sagesyn.ai`                            |
+| Pages Preview   | `https://[hash].sagesyn-website.pages.dev`      |
+| Pages Dashboard | `https://dash.cloudflare.com` → Workers & Pages |
+| GitHub Repo     | `https://github.com/sagesyn/sagesyn-website`    |
 
 ### CLI Commands
 
