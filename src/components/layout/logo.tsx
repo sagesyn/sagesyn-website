@@ -65,7 +65,7 @@ export function Logo({ className, showText = true }: LogoProps) {
 
       {/* Wordmark */}
       {showText && (
-        <span className="font-display text-xl font-bold tracking-tight text-foreground">
+        <span className="font-display text-foreground text-xl font-bold tracking-tight">
           Sage<span className="gradient-text">Syn</span>
         </span>
       )}

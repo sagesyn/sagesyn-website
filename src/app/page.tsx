@@ -10,10 +10,10 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen">
       {/* Grid background effect */}
-      <div className="fixed inset-0 grid-background opacity-50" />
+      <div className="grid-background fixed inset-0 opacity-50" />
 
       {/* Gradient overlay */}
-      <div className="pointer-events-none fixed inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+      <div className="to-background pointer-events-none fixed inset-0 bg-gradient-to-b from-transparent via-transparent" />
 
       {/* Main content */}
       <div className="relative z-10">

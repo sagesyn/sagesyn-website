@@ -19,15 +19,15 @@ SageSyn builds **futuristic agent infrastructure** - a coordinated layer where i
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Framework | [Next.js 15](https://nextjs.org) (App Router, Static Export) |
-| Package Manager | [Bun](https://bun.sh) |
-| UI Components | [shadcn/ui](https://ui.shadcn.com) |
-| Styling | [Tailwind CSS v4](https://tailwindcss.com) |
-| Content | [Velite](https://velite.js.org) (MDX) |
-| Animation | [Motion](https://motion.dev) |
-| Deployment | [Cloudflare Pages](https://pages.cloudflare.com) |
+| Layer           | Technology                                                   |
+| --------------- | ------------------------------------------------------------ |
+| Framework       | [Next.js 15](https://nextjs.org) (App Router, Static Export) |
+| Package Manager | [Bun](https://bun.sh)                                        |
+| UI Components   | [shadcn/ui](https://ui.shadcn.com)                           |
+| Styling         | [Tailwind CSS v4](https://tailwindcss.com)                   |
+| Content         | [Velite](https://velite.js.org) (MDX)                        |
+| Animation       | [Motion](https://motion.dev)                                 |
+| Deployment      | [Cloudflare Pages](https://pages.cloudflare.com)             |
 
 ## Getting Started
 
@@ -132,8 +132,8 @@ bunx wrangler pages deploy out --project-name=sagesyn-website
 
 ### Environment Variables
 
-| Variable | Description |
-|----------|-------------|
+| Variable               | Description                               |
+| ---------------------- | ----------------------------------------- |
 | `NEXT_PUBLIC_SITE_URL` | Canonical site URL (`https://sagesyn.ai`) |
 
 ## Documentation

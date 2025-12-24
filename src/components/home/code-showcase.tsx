@@ -115,7 +115,7 @@ export function CodeShowcase() {
   return (
     <section className="relative py-24 sm:py-32">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface/50 to-transparent" />
+      <div className="via-surface/50 absolute inset-0 bg-gradient-to-b from-transparent to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
@@ -123,7 +123,7 @@ export function CodeShowcase() {
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Build with <span className="gradient-text">any language</span>
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="text-muted mt-4 text-lg">
             First-class SDKs for TypeScript, Python, and Go. Define agents with
             clean, declarative APIs.
           </p>
@@ -133,12 +133,12 @@ export function CodeShowcase() {
         <div className="mx-auto mt-16 max-w-4xl">
           <div className="relative">
             {/* Glow */}
-            <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-neon-cyan/10 via-neon-magenta/10 to-neon-cyan/10 blur-2xl" />
+            <div className="from-neon-cyan/10 via-neon-magenta/10 to-neon-cyan/10 absolute -inset-4 rounded-2xl bg-gradient-to-r blur-2xl" />
 
             {/* Window */}
-            <div className="relative overflow-hidden rounded-xl border border-border bg-surface">
+            <div className="border-border bg-surface relative overflow-hidden rounded-xl border">
               {/* Tab bar */}
-              <div className="flex items-center justify-between border-b border-border bg-surface-elevated px-4">
+              <div className="border-border bg-surface-elevated flex items-center justify-between border-b px-4">
                 <div className="flex">
                   {(Object.keys(codeExamples) as Language[]).map((lang) => (
                     <button
@@ -153,7 +153,7 @@ export function CodeShowcase() {
                     >
                       {codeExamples[lang].label}
                       {activeTab === lang && (
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-neon-cyan to-neon-magenta" />
+                        <div className="from-neon-cyan to-neon-magenta absolute right-0 bottom-0 left-0 h-0.5 bg-gradient-to-r" />
                       )}
                     </button>
                   ))}
@@ -162,11 +162,11 @@ export function CodeShowcase() {
                 {/* Copy button */}
                 <button
                   onClick={handleCopy}
-                  className="flex items-center gap-2 rounded-md px-3 py-1.5 text-sm text-muted transition-colors hover:bg-surface hover:text-foreground"
+                  className="text-muted hover:bg-surface hover:text-foreground flex items-center gap-2 rounded-md px-3 py-1.5 text-sm transition-colors"
                 >
                   {copied ? (
                     <>
-                      <Check className="h-4 w-4 text-neon-green" />
+                      <Check className="text-neon-green h-4 w-4" />
                       Copied!
                     </>
                   ) : (

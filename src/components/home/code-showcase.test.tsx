@@ -46,7 +46,9 @@ describe("CodeShowcase component", () => {
     render(<CodeShowcase />);
     const goTab = screen.getByText("Go");
     fireEvent.click(goTab);
-    expect(screen.getByText(/github.com\/sagesyn\/sdk-go/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/github.com\/sagesyn\/sdk-go/i)
+    ).toBeInTheDocument();
   });
 
   it("renders copy button", () => {

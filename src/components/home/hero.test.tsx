@@ -40,7 +40,9 @@ describe("Hero component", () => {
   it("renders terminal output steps", () => {
     render(<Hero />);
     expect(screen.getByText(/creating agent mesh/i)).toBeInTheDocument();
-    expect(screen.getByText(/configuring decision fabric/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/configuring decision fabric/i)
+    ).toBeInTheDocument();
     expect(screen.getByText(/setting up observability/i)).toBeInTheDocument();
   });
 
@@ -53,7 +55,9 @@ describe("Hero component", () => {
 
   it("has correct link to docs", () => {
     render(<Hero />);
-    const getStartedLinks = screen.getAllByRole("link", { name: /get started/i });
+    const getStartedLinks = screen.getAllByRole("link", {
+      name: /get started/i,
+    });
     expect(getStartedLinks[0]).toHaveAttribute("href", "/docs/getting-started");
   });
 

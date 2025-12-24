@@ -80,7 +80,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen bg-background antialiased">{children}</body>
+      <body className="bg-background min-h-screen antialiased">{children}</body>
     </html>
   );
 }

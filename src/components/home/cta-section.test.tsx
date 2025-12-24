@@ -11,9 +11,7 @@ describe("CTASection component", () => {
 
   it("renders description", () => {
     render(<CTASection />);
-    expect(
-      screen.getByText(/join the private beta/i)
-    ).toBeInTheDocument();
+    expect(screen.getByText(/join the private beta/i)).toBeInTheDocument();
   });
 
   it("renders Start Building button", () => {
@@ -33,7 +31,9 @@ describe("CTASection component", () => {
 
   it("has correct link to docs", () => {
     render(<CTASection />);
-    const startBuildingLink = screen.getByRole("link", { name: /start building/i });
+    const startBuildingLink = screen.getByRole("link", {
+      name: /start building/i,
+    });
     expect(startBuildingLink).toHaveAttribute("href", "/docs/getting-started");
   });
 

@@ -6,16 +6,16 @@ This is the official SageSyn company website - a developer-focused, dark cyberne
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Framework | Next.js 15 (App Router, static export) |
-| Package Manager | Bun |
-| UI Components | shadcn/ui (New York style) |
-| Styling | Tailwind CSS v4 |
-| Animation | Motion (Framer Motion) |
-| Icons | Lucide React |
-| Testing | Vitest + Testing Library |
-| Deployment | Cloudflare Pages |
+| Layer           | Technology                             |
+| --------------- | -------------------------------------- |
+| Framework       | Next.js 15 (App Router, static export) |
+| Package Manager | Bun                                    |
+| UI Components   | shadcn/ui (New York style)             |
+| Styling         | Tailwind CSS v4                        |
+| Animation       | Motion (Framer Motion)                 |
+| Icons           | Lucide React                           |
+| Testing         | Vitest + Testing Library               |
+| Deployment      | Cloudflare Pages                       |
 
 ## Commands
 
@@ -105,11 +105,11 @@ export function Card({ title, description, icon: Icon }: CardProps) {
 
 ```typescript
 // Imports order
-import { useState, useEffect } from "react";           // React
-import Link from "next/link";                          // Next.js
-import { ArrowRight, Github } from "lucide-react";     // External libs
-import { cn } from "@/lib/utils";                      // Internal utils
-import { Button } from "@/components/ui/button";       // Internal components
+import { useState, useEffect } from "react"; // React
+import Link from "next/link"; // Next.js
+import { ArrowRight, Github } from "lucide-react"; // External libs
+import { cn } from "@/lib/utils"; // Internal utils
+import { Button } from "@/components/ui/button"; // Internal components
 ```
 
 ### Styling

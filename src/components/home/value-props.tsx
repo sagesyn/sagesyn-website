@@ -35,9 +35,10 @@ export function ValueProps() {
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Infrastructure for the <span className="gradient-text">Agentic Era</span>
+            Infrastructure for the{" "}
+            <span className="gradient-text">Agentic Era</span>
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="text-muted mt-4 text-lg">
             Stop treating agents as ad-hoc scripts. Build them as first-class
             infrastructure that continuously coordinates, learns, and executes.
           </p>
@@ -61,7 +62,7 @@ export function ValueProps() {
                 />
 
                 {/* Card */}
-                <div className="relative flex flex-col rounded-xl border border-border bg-surface p-8 transition-all duration-300 hover:border-border-glow">
+                <div className="border-border bg-surface hover:border-border-glow relative flex flex-col rounded-xl border p-8 transition-all duration-300">
                   {/* Icon */}
                   <div
                     className={cn(
@@ -69,14 +70,14 @@ export function ValueProps() {
                       feature.gradient
                     )}
                   >
-                    <feature.icon className="h-6 w-6 text-background" />
+                    <feature.icon className="text-background h-6 w-6" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-display text-xl font-semibold text-foreground">
+                  <h3 className="font-display text-foreground text-xl font-semibold">
                     {feature.name}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                  <p className="text-muted mt-3 flex-1 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

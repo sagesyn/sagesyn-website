@@ -17,10 +17,10 @@ export function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           {/* Badge */}
-          <div className="animate-fade-in mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-surface/50 px-4 py-2 text-sm backdrop-blur-sm">
-            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-neon-cyan" />
+          <div className="animate-fade-in border-border bg-surface/50 mb-8 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm backdrop-blur-sm">
+            <span className="bg-neon-cyan inline-block h-2 w-2 animate-pulse rounded-full" />
             <span className="text-muted">Now in Private Beta</span>
-            <ArrowRight className="h-4 w-4 text-neon-cyan" />
+            <ArrowRight className="text-neon-cyan h-4 w-4" />
           </div>
 
           {/* Headline */}
@@ -29,14 +29,16 @@ export function Hero() {
             style={{ animationDelay: "100ms" }}
           >
             The{" "}
-            <span className="gradient-text text-glow-cyan">Decision Fabric</span>
+            <span className="gradient-text text-glow-cyan">
+              Decision Fabric
+            </span>
             <br />
             for Intelligent Systems
           </h1>
 
           {/* Subheadline */}
           <p
-            className="animate-fade-in mt-6 text-lg leading-8 text-muted sm:text-xl"
+            className="animate-fade-in text-muted mt-6 text-lg leading-8 sm:text-xl"
             style={{ animationDelay: "200ms" }}
           >
             Build the next generation of agent infrastructure. Coordinate
@@ -51,7 +53,7 @@ export function Hero() {
           >
             <Link
               href="/docs/getting-started"
-              className="group flex items-center gap-2 rounded-lg bg-neon-cyan px-6 py-3 text-sm font-semibold text-background transition-all hover:shadow-glow-cyan"
+              className="group bg-neon-cyan text-background hover:shadow-glow-cyan flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all"
             >
               Get Started
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -60,7 +62,7 @@ export function Hero() {
               href="https://github.com/sagesyn"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg border border-border bg-surface/50 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-all hover:border-neon-cyan/50 hover:bg-surface"
+              className="border-border bg-surface/50 text-foreground hover:border-neon-cyan/50 hover:bg-surface flex items-center gap-2 rounded-lg border px-6 py-3 text-sm font-semibold backdrop-blur-sm transition-all"
             >
               <Github className="h-5 w-5" />
               Star on GitHub
@@ -74,16 +76,16 @@ export function Hero() {
           >
             <div className="relative mx-auto max-w-2xl">
               {/* Glow effect */}
-              <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-neon-cyan/20 via-neon-magenta/20 to-neon-cyan/20 opacity-50 blur-2xl" />
+              <div className="from-neon-cyan/20 via-neon-magenta/20 to-neon-cyan/20 absolute -inset-4 rounded-2xl bg-gradient-to-r opacity-50 blur-2xl" />
 
               {/* Terminal window */}
-              <div className="relative overflow-hidden rounded-xl border border-border bg-surface">
+              <div className="border-border bg-surface relative overflow-hidden rounded-xl border">
                 {/* Title bar */}
-                <div className="flex items-center gap-2 border-b border-border bg-surface-elevated px-4 py-3">
+                <div className="border-border bg-surface-elevated flex items-center gap-2 border-b px-4 py-3">
                   <div className="h-3 w-3 rounded-full bg-red-500/80" />
                   <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
                   <div className="h-3 w-3 rounded-full bg-green-500/80" />
-                  <span className="ml-4 font-mono text-xs text-muted">
+                  <span className="text-muted ml-4 font-mono text-xs">
                     terminal
                   </span>
                 </div>
@@ -92,9 +94,11 @@ export function Hero() {
                 <div className="p-6 font-mono text-sm">
                   <div className="flex items-center gap-2">
                     <span className="text-neon-green">$</span>
-                    <span className="text-foreground">npx create-sagesyn-app my-agents</span>
+                    <span className="text-foreground">
+                      npx create-sagesyn-app my-agents
+                    </span>
                   </div>
-                  <div className="mt-4 space-y-1 text-muted">
+                  <div className="text-muted mt-4 space-y-1">
                     <p>
                       <span className="text-neon-cyan">✓</span> Creating agent
                       mesh...
@@ -113,7 +117,7 @@ export function Hero() {
                   </div>
                   <div className="mt-4 flex items-center gap-2">
                     <span className="text-neon-green">$</span>
-                    <span className="inline-block h-4 w-2 animate-terminal-blink bg-neon-cyan" />
+                    <span className="animate-terminal-blink bg-neon-cyan inline-block h-4 w-2" />
                   </div>
                 </div>
               </div>
@@ -123,7 +127,7 @@ export function Hero() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="from-background absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-t to-transparent" />
     </section>
   );
 }

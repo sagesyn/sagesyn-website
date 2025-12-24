@@ -22,14 +22,26 @@ const demoLines = [
     ],
   },
   { type: "output", content: "" },
-  { type: "command", content: "sagesyn run --agent researcher 'Find latest AI papers'" },
+  {
+    type: "command",
+    content: "sagesyn run --agent researcher 'Find latest AI papers'",
+  },
   { type: "output", content: "" },
   { type: "info", content: "[researcher] Perceiving input..." },
-  { type: "info", content: "[researcher] Reasoning with context (depth: 3)..." },
-  { type: "info", content: "[researcher] Executing plan with tools: [web_search, arxiv]" },
+  {
+    type: "info",
+    content: "[researcher] Reasoning with context (depth: 3)...",
+  },
+  {
+    type: "info",
+    content: "[researcher] Executing plan with tools: [web_search, arxiv]",
+  },
   { type: "output", content: "" },
   { type: "result", content: "Found 12 relevant papers from arxiv.org" },
-  { type: "result", content: "Top result: 'Advances in Multi-Agent Systems' (2024)" },
+  {
+    type: "result",
+    content: "Top result: 'Advances in Multi-Agent Systems' (2024)",
+  },
 ];
 
 export function TerminalDemo() {
@@ -65,10 +77,10 @@ export function TerminalDemo() {
             <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
               Observe <span className="gradient-text">everything</span>
             </h2>
-            <p className="mt-4 text-lg text-muted">
-              Full visibility into your agent mesh. Track requests, latency,
-              and decisions in real-time. Debug complex multi-agent workflows
-              with ease.
+            <p className="text-muted mt-4 text-lg">
+              Full visibility into your agent mesh. Track requests, latency, and
+              decisions in real-time. Debug complex multi-agent workflows with
+              ease.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -79,7 +91,7 @@ export function TerminalDemo() {
                 "Alert on anomalies and failures",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm">
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-neon-cyan" />
+                  <span className="bg-neon-cyan inline-block h-1.5 w-1.5 rounded-full" />
                   {item}
                 </li>
               ))}
@@ -89,16 +101,16 @@ export function TerminalDemo() {
           {/* Terminal */}
           <div className="relative">
             {/* Glow */}
-            <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-neon-cyan/10 to-neon-magenta/10 blur-2xl" />
+            <div className="from-neon-cyan/10 to-neon-magenta/10 absolute -inset-4 rounded-2xl bg-gradient-to-r blur-2xl" />
 
             {/* Window */}
-            <div className="relative overflow-hidden rounded-xl border border-border bg-surface">
+            <div className="border-border bg-surface relative overflow-hidden rounded-xl border">
               {/* Title bar */}
-              <div className="flex items-center gap-2 border-b border-border bg-surface-elevated px-4 py-3">
+              <div className="border-border bg-surface-elevated flex items-center gap-2 border-b px-4 py-3">
                 <div className="h-3 w-3 rounded-full bg-red-500/80" />
                 <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
                 <div className="h-3 w-3 rounded-full bg-green-500/80" />
-                <span className="ml-4 font-mono text-xs text-muted">
+                <span className="text-muted ml-4 font-mono text-xs">
                   sagesyn-cli
                 </span>
               </div>
@@ -150,7 +162,7 @@ export function TerminalDemo() {
                 {isTyping && (
                   <div className="mt-2 flex items-center gap-2">
                     <span className="text-neon-green">$</span>
-                    <span className="inline-block h-4 w-2 animate-terminal-blink bg-neon-cyan" />
+                    <span className="animate-terminal-blink bg-neon-cyan inline-block h-4 w-2" />
                   </div>
                 )}
               </div>

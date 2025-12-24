@@ -43,7 +43,7 @@ describe("Header component", () => {
     fireEvent.click(closeButton);
 
     // Menu should be hidden (using the hidden class)
-    const mobileMenu = document.querySelector('.hidden.lg\\:hidden');
+    const mobileMenu = document.querySelector(".hidden.lg\\:hidden");
     expect(mobileMenu).toBeTruthy();
   });
 
@@ -55,7 +55,9 @@ describe("Header component", () => {
 
   it("renders GitHub link with external attributes", () => {
     render(<Header />);
-    const githubLinks = document.querySelectorAll('a[href="https://github.com/sagesyn"]');
+    const githubLinks = document.querySelectorAll(
+      'a[href="https://github.com/sagesyn"]'
+    );
     expect(githubLinks.length).toBeGreaterThan(0);
     expect(githubLinks[0]).toHaveAttribute("target", "_blank");
     expect(githubLinks[0]).toHaveAttribute("rel", "noopener noreferrer");

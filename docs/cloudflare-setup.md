@@ -39,20 +39,20 @@ If you don't have one already:
 
 Configure the following build settings:
 
-| Setting | Value |
-|---------|-------|
-| **Framework preset** | None |
-| **Build command** | `bun run build` |
-| **Build output directory** | `out` |
-| **Root directory** | `/` |
+| Setting                    | Value           |
+| -------------------------- | --------------- |
+| **Framework preset**       | None            |
+| **Build command**          | `bun run build` |
+| **Build output directory** | `out`           |
+| **Root directory**         | `/`             |
 
 ### 1.4 Set Environment Variables
 
 Add the following environment variables:
 
-| Variable | Value |
-|----------|-------|
-| `NODE_VERSION` | `20` |
+| Variable               | Value                |
+| ---------------------- | -------------------- |
+| `NODE_VERSION`         | `20`                 |
 | `NEXT_PUBLIC_SITE_URL` | `https://sagesyn.ai` |
 
 Click **Save and Deploy** to trigger the first build.
@@ -142,16 +142,16 @@ For the redirect to work, add a placeholder DNS record:
 
 ### sagesyn.ai Zone
 
-| Type | Name | Content | Proxy |
-|------|------|---------|-------|
-| CNAME | `@` | `sagesyn-website.pages.dev` | Proxied |
-| CNAME | `www` | `sagesyn.ai` | Proxied |
+| Type  | Name  | Content                     | Proxy   |
+| ----- | ----- | --------------------------- | ------- |
+| CNAME | `@`   | `sagesyn-website.pages.dev` | Proxied |
+| CNAME | `www` | `sagesyn.ai`                | Proxied |
 
 ### sagesyn.com Zone
 
-| Type | Name | Content | Proxy |
-|------|------|---------|-------|
-| A | `@` | `192.0.2.1` | Proxied |
+| Type  | Name  | Content       | Proxy   |
+| ----- | ----- | ------------- | ------- |
+| A     | `@`   | `192.0.2.1`   | Proxied |
 | CNAME | `www` | `sagesyn.com` | Proxied |
 
 ---
