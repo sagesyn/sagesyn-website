@@ -58,13 +58,18 @@ export function TerminalDemo() {
       );
       return () => clearTimeout(timer);
     } else {
-      setIsTyping(false);
-      // Reset after a pause
+      // Stop typing and reset after a pause
       const resetTimer = setTimeout(() => {
+        setIsTyping(false);
+      }, 0);
+      const loopTimer = setTimeout(() => {
         setVisibleLines(0);
         setIsTyping(true);
       }, 5000);
-      return () => clearTimeout(resetTimer);
+      return () => {
+        clearTimeout(resetTimer);
+        clearTimeout(loopTimer);
+      };
     }
   }, [visibleLines]);
 

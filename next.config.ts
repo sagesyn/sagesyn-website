@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactStrictMode: true,
-  eslint: {
-    dirs: ["src"],
-  },
 };
 
 export default nextConfig;
