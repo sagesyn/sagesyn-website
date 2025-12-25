@@ -7,6 +7,8 @@ import {
   CorePrinciples,
   WhatIsSageSyn,
   ProductOverview,
+  TechStack,
+  OpenSource,
 } from "@/components/about";
 
 export const metadata: Metadata = {
@@ -31,6 +33,8 @@ export default function AboutPage() {
         <WhatIsSageSyn />
         <CorePrinciples />
         <ProductOverview />
+        <TechStack />
+        <OpenSource />
       </main>
 
       <Footer />
