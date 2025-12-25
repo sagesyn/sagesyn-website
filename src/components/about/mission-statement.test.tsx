@@ -11,7 +11,7 @@ describe("MissionStatement component", () => {
   it("renders the mission statement", () => {
     render(<MissionStatement />);
     expect(
-      screen.getByText(/democratize the creation of intelligent systems/i)
+      screen.getByText(/universal language for defining intelligent agents/i)
     ).toBeInTheDocument();
   });
 
@@ -23,8 +23,10 @@ describe("MissionStatement component", () => {
   it("renders the pillars", () => {
     render(<MissionStatement />);
     expect(
-      screen.getByText("Visual-first approach to agent development")
+      screen.getByText("Declarative language for agent definition")
     ).toBeInTheDocument();
-    expect(screen.getByText("Open source at the core")).toBeInTheDocument();
+    expect(
+      screen.getByText("Visual IDE for workflow design")
+    ).toBeInTheDocument();
   });
 });

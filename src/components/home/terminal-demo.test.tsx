@@ -13,24 +13,25 @@ describe("TerminalDemo component", () => {
 
   it("renders section headline", () => {
     render(<TerminalDemo />);
-    expect(screen.getByText(/observe/i)).toBeInTheDocument();
-    expect(screen.getByText(/everything/i)).toBeInTheDocument();
+    expect(screen.getByText(/compile, check,/i)).toBeInTheDocument();
+    const runElements = screen.getAllByText(/run/i);
+    expect(runElements.length).toBeGreaterThan(0);
   });
 
   it("renders section description", () => {
     render(<TerminalDemo />);
     expect(
-      screen.getByText(/full visibility into your agent mesh/i)
+      screen.getByText(/the sagesyn cli compiles your .ssag files/i)
     ).toBeInTheDocument();
   });
 
   it("renders feature list", () => {
     render(<TerminalDemo />);
     expect(
-      screen.getByText(/real-time metrics and health monitoring/i)
+      screen.getByText(/compile to typescript, python, or go/i)
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/trace requests across agent boundaries/i)
+      screen.getByText(/lsp diagnostics from the command line/i)
     ).toBeInTheDocument();
   });
 

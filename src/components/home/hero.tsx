@@ -6,7 +6,7 @@ import { ParticleField } from "@/components/effects/particle-field";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden pt-32">
+    <section className="relative overflow-hidden pt-32 pb-16">
       {/* Particle background */}
       <ParticleField className="absolute inset-0" />
 
@@ -30,10 +30,10 @@ export function Hero() {
           >
             The{" "}
             <span className="gradient-text text-glow-cyan">
-              Decision Fabric
+              Agent Programming
             </span>
             <br />
-            for Intelligent Systems
+            Language
           </h1>
 
           {/* Subheadline */}
@@ -41,9 +41,9 @@ export function Hero() {
             className="animate-fade-in text-muted mt-6 text-lg leading-8 sm:text-xl"
             style={{ animationDelay: "200ms" }}
           >
-            Build the next generation of agent infrastructure. Coordinate
-            intelligent agents, tools, and data as a stable mesh - layered,
-            observable, and safe.
+            Define agents in a declarative language. Compile to TypeScript,
+            Python, or Go. Edit with full LSP support in VSCode, Vim, and
+            Neovim.
           </p>
 
           {/* CTAs */}
@@ -52,10 +52,10 @@ export function Hero() {
             style={{ animationDelay: "300ms" }}
           >
             <Link
-              href="/docs/getting-started"
+              href="/docs"
               className="group bg-neon-cyan text-background hover:shadow-glow-cyan flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold transition-all"
             >
-              Get Started
+              Read the Docs
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
@@ -95,24 +95,24 @@ export function Hero() {
                   <div className="flex items-center gap-2">
                     <span className="text-neon-green">$</span>
                     <span className="text-foreground">
-                      npx create-sagesyn-app my-agents
+                      sagesyn init research-assistant.ssag
                     </span>
                   </div>
                   <div className="text-muted mt-4 space-y-1">
                     <p>
-                      <span className="text-neon-cyan">✓</span> Creating agent
-                      mesh...
+                      <span className="text-neon-cyan">✓</span> Created
+                      research-assistant.ssag
                     </p>
                     <p>
-                      <span className="text-neon-cyan">✓</span> Configuring
-                      decision fabric...
+                      <span className="text-neon-cyan">✓</span> Configured MCP
+                      servers
                     </p>
                     <p>
-                      <span className="text-neon-cyan">✓</span> Setting up
-                      observability...
+                      <span className="text-neon-cyan">✓</span> LSP ready - open
+                      in your editor
                     </p>
                     <p className="text-neon-green">
-                      ✓ Ready! Your agent infrastructure is live.
+                      ✓ Run: sagesyn compile --target typescript
                     </p>
                   </div>
                   <div className="mt-4 flex items-center gap-2">

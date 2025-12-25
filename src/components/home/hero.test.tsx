@@ -5,8 +5,9 @@ import { Hero } from "./hero";
 describe("Hero component", () => {
   it("renders main headline", () => {
     render(<Hero />);
-    expect(screen.getAllByText(/decision fabric/i).length).toBeGreaterThan(0);
-    expect(screen.getByText(/intelligent systems/i)).toBeInTheDocument();
+    expect(screen.getByText(/agent programming/i)).toBeInTheDocument();
+    const languageElements = screen.getAllByText(/language/i);
+    expect(languageElements.length).toBeGreaterThan(0);
   });
 
   it("renders beta badge", () => {
@@ -17,14 +18,14 @@ describe("Hero component", () => {
   it("renders subheadline", () => {
     render(<Hero />);
     expect(
-      screen.getByText(/build the next generation of agent infrastructure/i)
+      screen.getByText(/define agents in a declarative language/i)
     ).toBeInTheDocument();
   });
 
-  it("renders Get Started CTA button", () => {
+  it("renders Read the Docs CTA button", () => {
     render(<Hero />);
-    const getStartedLinks = screen.getAllByText("Get Started");
-    expect(getStartedLinks.length).toBeGreaterThan(0);
+    const readDocsLinks = screen.getAllByText("Read the Docs");
+    expect(readDocsLinks.length).toBeGreaterThan(0);
   });
 
   it("renders Star on GitHub button", () => {
@@ -34,31 +35,33 @@ describe("Hero component", () => {
 
   it("renders terminal preview", () => {
     render(<Hero />);
-    expect(screen.getByText(/npx create-sagesyn-app/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/sagesyn init research-assistant.ssag/i)
+    ).toBeInTheDocument();
   });
 
   it("renders terminal output steps", () => {
     render(<Hero />);
-    expect(screen.getByText(/creating agent mesh/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/configuring decision fabric/i)
+      screen.getByText(/created research-assistant.ssag/i)
     ).toBeInTheDocument();
-    expect(screen.getByText(/setting up observability/i)).toBeInTheDocument();
+    expect(screen.getByText(/configured mcp servers/i)).toBeInTheDocument();
+    expect(screen.getByText(/lsp ready/i)).toBeInTheDocument();
   });
 
-  it("renders success message in terminal", () => {
+  it("renders compile command in terminal", () => {
     render(<Hero />);
     expect(
-      screen.getByText(/your agent infrastructure is live/i)
+      screen.getByText(/sagesyn compile --target typescript/i)
     ).toBeInTheDocument();
   });
 
   it("has correct link to docs", () => {
     render(<Hero />);
-    const getStartedLinks = screen.getAllByRole("link", {
-      name: /get started/i,
+    const readDocsLinks = screen.getAllByRole("link", {
+      name: /read the docs/i,
     });
-    expect(getStartedLinks[0]).toHaveAttribute("href", "/docs/getting-started");
+    expect(readDocsLinks[0]).toHaveAttribute("href", "/docs");
   });
 
   it("has correct link to GitHub", () => {

@@ -10,11 +10,11 @@ describe("CorePrinciples component", () => {
 
   it("renders the principles", () => {
     render(<CorePrinciples />);
-    expect(screen.getByText("Visual-First Development")).toBeInTheDocument();
-    expect(screen.getByText("Context Window Mastery")).toBeInTheDocument();
+    expect(screen.getByText("Declarative Syntax")).toBeInTheDocument();
+    expect(screen.getByText("Multi-Target Compilation")).toBeInTheDocument();
+    expect(screen.getByText("LSP-Powered Editing")).toBeInTheDocument();
+    expect(screen.getByText("Protocol Primitives")).toBeInTheDocument();
     expect(screen.getByText("Model Agnostic")).toBeInTheDocument();
-    expect(screen.getByText("Protocol Native")).toBeInTheDocument();
-    expect(screen.getByText("Local-First Design")).toBeInTheDocument();
     expect(screen.getByText("Open Source Core")).toBeInTheDocument();
   });
 });

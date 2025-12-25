@@ -113,7 +113,7 @@ export function CodeShowcase() {
   };
 
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative py-12 sm:py-16">
       {/* Background gradient */}
       <div className="via-surface/50 absolute inset-0 bg-gradient-to-b from-transparent to-transparent" />
 

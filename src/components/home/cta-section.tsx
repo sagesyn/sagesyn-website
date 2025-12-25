@@ -3,7 +3,7 @@ import { ArrowRight, Github, Mail } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative py-12 sm:py-16">
       {/* Background */}
       <div className="from-surface absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
 
@@ -19,21 +19,20 @@ export function CTASection() {
 
             <div className="relative mx-auto max-w-2xl text-center">
               <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                Ready to build the <span className="gradient-text">future</span>
-                ?
+                Start writing <span className="gradient-text">.ssag</span> today
               </h2>
               <p className="text-muted mt-4 text-lg">
-                Join the private beta and start building agent infrastructure
-                that scales. Get early access to our SDKs and dedicated support.
+                Define agents in a declarative language. Compile to any target.
+                Get early access to the compiler, LSP, and visual IDE.
               </p>
 
               {/* CTAs */}
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
-                  href="/docs/getting-started"
+                  href="/docs"
                   className="group bg-neon-cyan text-background hover:shadow-glow-cyan flex w-full items-center justify-center gap-2 rounded-lg px-8 py-4 text-sm font-semibold transition-all sm:w-auto"
                 >
-                  Start Building
+                  Read the Docs
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link

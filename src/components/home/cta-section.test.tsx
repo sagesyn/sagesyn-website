@@ -5,18 +5,20 @@ import { CTASection } from "./cta-section";
 describe("CTASection component", () => {
   it("renders headline", () => {
     render(<CTASection />);
-    expect(screen.getByText(/ready to build the/i)).toBeInTheDocument();
-    expect(screen.getByText(/future/i)).toBeInTheDocument();
+    expect(screen.getByText(/start writing/i)).toBeInTheDocument();
+    expect(screen.getByText(/.ssag/i)).toBeInTheDocument();
   });
 
   it("renders description", () => {
     render(<CTASection />);
-    expect(screen.getByText(/join the private beta/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/define agents in a declarative language/i)
+    ).toBeInTheDocument();
   });
 
-  it("renders Start Building button", () => {
+  it("renders Read the Docs button", () => {
     render(<CTASection />);
-    expect(screen.getByText("Start Building")).toBeInTheDocument();
+    expect(screen.getByText("Read the Docs")).toBeInTheDocument();
   });
 
   it("renders View on GitHub button", () => {
@@ -31,10 +33,10 @@ describe("CTASection component", () => {
 
   it("has correct link to docs", () => {
     render(<CTASection />);
-    const startBuildingLink = screen.getByRole("link", {
-      name: /start building/i,
+    const readDocsLink = screen.getByRole("link", {
+      name: /read the docs/i,
     });
-    expect(startBuildingLink).toHaveAttribute("href", "/docs/getting-started");
+    expect(readDocsLink).toHaveAttribute("href", "/docs");
   });
 
   it("has correct link to GitHub", () => {

@@ -2,7 +2,7 @@ import { executiveVision } from "@/data/mission";
 
 export function HeroAbout() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-12 sm:py-16">
       {/* Background gradient */}
       <div className="absolute inset-0 -z-10">
         <div className="from-brand-cyan/5 via-brand-indigo/5 absolute inset-0 bg-gradient-to-b to-transparent" />

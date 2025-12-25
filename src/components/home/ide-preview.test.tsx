@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { render, screen, act } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import { IDEPreview } from "./ide-preview";
 
 describe("IDEPreview", () => {
@@ -14,22 +14,22 @@ describe("IDEPreview", () => {
   it("renders the section header", () => {
     render(<IDEPreview />);
     expect(screen.getByText("Visual Agent Builder")).toBeInTheDocument();
-    expect(
-      screen.getByText("Build Agent Workflows Visually")
-    ).toBeInTheDocument();
   });
 
   it("renders the IDE window with title bar", () => {
     render(<IDEPreview />);
     expect(screen.getByText("sagesyn")).toBeInTheDocument();
-    expect(screen.getByText("~/research-assistant")).toBeInTheDocument();
+    expect(
+      screen.getByText("~/projects/research-assistant.ssag")
+    ).toBeInTheDocument();
   });
 
-  it("renders the toolbar tabs", () => {
+  it("renders all toolbar tabs", () => {
     render(<IDEPreview />);
     expect(screen.getByText("canvas")).toBeInTheDocument();
     expect(screen.getByText("code")).toBeInTheDocument();
     expect(screen.getByText("logs")).toBeInTheDocument();
+    expect(screen.getByText("context")).toBeInTheDocument();
   });
 
   it("renders the run button", () => {
@@ -37,7 +37,7 @@ describe("IDEPreview", () => {
     expect(screen.getByText("run")).toBeInTheDocument();
   });
 
-  it("renders the workflow nodes", () => {
+  it("renders the workflow nodes on canvas", () => {
     render(<IDEPreview />);
     expect(screen.getByText("user_input")).toBeInTheDocument();
     expect(screen.getByText("research_agent")).toBeInTheDocument();
@@ -46,67 +46,76 @@ describe("IDEPreview", () => {
     expect(screen.getByText("file_output")).toBeInTheDocument();
   });
 
-  it("renders the sidebar with node types", () => {
+  it("switches to code tab when clicked", () => {
     render(<IDEPreview />);
-    expect(screen.getByText("nodes")).toBeInTheDocument();
-    expect(screen.getByText("trigger")).toBeInTheDocument();
-    expect(screen.getByText("agent")).toBeInTheDocument();
-    expect(screen.getByText("tool")).toBeInTheDocument();
-    expect(screen.getByText("output")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("code"));
+    expect(
+      screen.getByText(/SageSyn Agent Programming Language/)
+    ).toBeInTheDocument();
   });
 
-  it("renders MCP servers list", () => {
+  it("switches to logs tab when clicked", () => {
+    render(<IDEPreview />);
+    fireEvent.click(screen.getByText("logs"));
+    expect(screen.getByText("execution log")).toBeInTheDocument();
+    expect(
+      screen.getByText("press run to start execution")
+    ).toBeInTheDocument();
+  });
+
+  it("switches to context tab when clicked", () => {
+    render(<IDEPreview />);
+    fireEvent.click(screen.getByText("context"));
+    expect(screen.getByText("context window inspector")).toBeInTheDocument();
+    expect(screen.getByText("allocation")).toBeInTheDocument();
+  });
+
+  it("shows running state when run button clicked", async () => {
+    render(<IDEPreview />);
+    const runButton = screen.getByText("run").closest("button")!;
+    fireEvent.click(runButton);
+    expect(screen.getByText("running")).toBeInTheDocument();
+  });
+
+  it("populates execution logs when running", async () => {
+    render(<IDEPreview />);
+    fireEvent.click(screen.getByText("logs"));
+    fireEvent.click(screen.getByText("run").closest("button")!);
+
+    await act(async () => {
+      vi.advanceTimersByTime(1000);
+    });
+
+    expect(screen.getByText("workflow.started")).toBeInTheDocument();
+  });
+
+  it("selects node and shows properties when clicked", () => {
+    render(<IDEPreview />);
+    fireEvent.click(screen.getByText("research_agent"));
+    // Properties panel should show the selected node
+    const nameInput = screen.getByDisplayValue("research_agent");
+    expect(nameInput).toBeInTheDocument();
+  });
+
+  it("renders MCP servers in sidebar", () => {
     render(<IDEPreview />);
     expect(screen.getByText("mcp servers")).toBeInTheDocument();
     expect(screen.getByText("filesystem")).toBeInTheDocument();
     expect(screen.getByText("brave_search")).toBeInTheDocument();
-    expect(screen.getByText("github")).toBeInTheDocument();
   });
 
   it("renders the status bar", () => {
     render(<IDEPreview />);
     expect(screen.getByText("5 nodes")).toBeInTheDocument();
-    expect(screen.getByText("3 mcp servers")).toBeInTheDocument();
+    expect(screen.getByText("4 mcp servers")).toBeInTheDocument();
     expect(screen.getByText("connected")).toBeInTheDocument();
   });
 
-  it("renders feature highlights", () => {
+  it("shows model providers panel when models tab clicked", () => {
     render(<IDEPreview />);
-    expect(screen.getByText("Multi-Model")).toBeInTheDocument();
-    expect(screen.getByText("Context Aware")).toBeInTheDocument();
-    expect(screen.getByText("Protocol Native")).toBeInTheDocument();
-  });
-
-  it("shows model info on agent nodes", () => {
-    render(<IDEPreview />);
-    expect(screen.getByText("claude-sonnet-4")).toBeInTheDocument();
-    expect(screen.getByText("gpt-4o")).toBeInTheDocument();
-  });
-
-  it("shows 'running' during animation sequence", async () => {
-    render(<IDEPreview />);
-
-    // Initially shows "run"
-    expect(screen.getByText("run")).toBeInTheDocument();
-
-    // Fast forward past the initial delay
-    await act(async () => {
-      vi.advanceTimersByTime(1500);
-    });
-
-    // Should now show "running"
-    expect(screen.getByText("running")).toBeInTheDocument();
-  });
-
-  it("returns to 'run' after animation completes", async () => {
-    render(<IDEPreview />);
-
-    // Run through full animation
-    await act(async () => {
-      vi.advanceTimersByTime(6000);
-    });
-
-    // Should be back to "run"
-    expect(screen.getByText("run")).toBeInTheDocument();
+    fireEvent.click(screen.getByText("models"));
+    expect(screen.getByText("anthropic")).toBeInTheDocument();
+    expect(screen.getByText("openai")).toBeInTheDocument();
+    expect(screen.getByText("ollama")).toBeInTheDocument();
   });
 });

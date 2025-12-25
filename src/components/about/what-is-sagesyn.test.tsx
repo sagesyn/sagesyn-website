@@ -21,7 +21,7 @@ describe("WhatIsSageSyn component", () => {
   it("renders 'What It Is' items", () => {
     render(<WhatIsSageSyn />);
     expect(
-      screen.getByText("A desktop IDE for building AI agents")
+      screen.getByText(/programming language for defining AI agents/i)
     ).toBeInTheDocument();
   });
 

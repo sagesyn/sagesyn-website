@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react";
 
 export function WhatIsSageSyn() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
