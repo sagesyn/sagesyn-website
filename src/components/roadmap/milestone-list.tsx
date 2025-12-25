@@ -10,20 +10,20 @@ export function MilestoneList({ milestones }: MilestoneListProps) {
     switch (status) {
       case "completed":
         return (
-          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-cyan">
-            <Check className="h-3 w-3 text-background" />
+          <div className="bg-brand-cyan flex h-5 w-5 items-center justify-center rounded-full">
+            <Check className="text-background h-3 w-3" />
           </div>
         );
       case "in_progress":
         return (
-          <div className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-brand-cyan">
-            <Clock className="h-3 w-3 text-brand-cyan" />
+          <div className="border-brand-cyan flex h-5 w-5 items-center justify-center rounded-full border-2">
+            <Clock className="text-brand-cyan h-3 w-3" />
           </div>
         );
       case "upcoming":
         return (
-          <div className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-border">
-            <Circle className="h-2 w-2 text-muted" />
+          <div className="border-border flex h-5 w-5 items-center justify-center rounded-full border-2">
+            <Circle className="text-muted h-2 w-2" />
           </div>
         );
     }
@@ -44,7 +44,7 @@ export function MilestoneList({ milestones }: MilestoneListProps) {
             >
               {milestone.name}
             </p>
-            <p className="text-xs text-muted">{milestone.description}</p>
+            <p className="text-muted text-xs">{milestone.description}</p>
           </div>
         </div>
       ))}

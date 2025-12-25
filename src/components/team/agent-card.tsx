@@ -36,29 +36,29 @@ export function AgentCard({
             {agent.name.slice(0, 2)}
           </div>
           <div>
-            <div className="text-sm font-medium text-foreground">
+            <div className="text-foreground text-sm font-medium">
               {agent.name}
             </div>
-            <div className="text-xs text-muted">{agent.role}</div>
+            <div className="text-muted text-xs">{agent.role}</div>
           </div>
         </div>
         <div className="text-right">
           <div className="text-lg font-bold" style={{ color: agent.color }}>
             {effort}%
           </div>
-          <div className="text-xs text-muted">effort</div>
+          <div className="text-muted text-xs">effort</div>
         </div>
       </div>
 
       {/* Effort bar */}
-      <div className="mb-3 h-1.5 overflow-hidden rounded-full bg-surface-elevated">
+      <div className="bg-surface-elevated mb-3 h-1.5 overflow-hidden rounded-full">
         <div
           className="h-full rounded-full transition-all duration-500"
           style={{ width: `${effort}%`, backgroundColor: agent.color }}
         />
       </div>
 
-      <p className="line-clamp-2 text-xs text-muted">{agent.scope}</p>
+      <p className="text-muted line-clamp-2 text-xs">{agent.scope}</p>
     </div>
   );
 }

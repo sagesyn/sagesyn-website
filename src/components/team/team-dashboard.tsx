@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { agents, phases, getOrchestrator, getTeamAgents, Agent } from "@/data/agents";
+import {
+  agents,
+  phases,
+  getOrchestrator,
+  getTeamAgents,
+  Agent,
+} from "@/data/agents";
 import { AgentCard } from "./agent-card";
 import { AgentDetail } from "./agent-detail";
 import { PhaseSelector } from "./phase-selector";
@@ -22,14 +28,14 @@ export function TeamDashboard() {
       {/* View Toggle */}
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h2 className="font-display text-2xl font-bold text-foreground">
+          <h2 className="font-display text-foreground text-2xl font-bold">
             SageSyn Agentic Team
           </h2>
-          <p className="text-sm text-muted">
+          <p className="text-muted text-sm">
             8 specialized agents + 1 orchestrator
           </p>
         </div>
-        <div className="flex gap-1 rounded-lg border border-border bg-surface p-1">
+        <div className="border-border bg-surface flex gap-1 rounded-lg border p-1">
           {(["grid", "timeline", "matrix"] as ViewMode[]).map((v) => (
             <button
               key={v}
@@ -68,7 +74,7 @@ export function TeamDashboard() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-foreground">
+                <span className="text-foreground font-bold">
                   {orchestrator.name}
                 </span>
                 <span
@@ -81,10 +87,10 @@ export function TeamDashboard() {
                   {orchestrator.role}
                 </span>
               </div>
-              <p className="text-sm text-muted">{orchestrator.scope}</p>
+              <p className="text-muted text-sm">{orchestrator.scope}</p>
             </div>
           </div>
-          <div className="text-right text-xs text-muted">
+          <div className="text-muted text-right text-xs">
             <div>Coordinates all agents</div>
             <div>100% allocation all phases</div>
           </div>
@@ -139,10 +145,10 @@ export function TeamDashboard() {
                       {agent.name.slice(0, 2)}
                     </div>
                     <div className="w-24 shrink-0">
-                      <div className="text-sm font-medium text-foreground">
+                      <div className="text-foreground text-sm font-medium">
                         {agent.name}
                       </div>
-                      <div className="text-xs text-muted">{agent.role}</div>
+                      <div className="text-muted text-xs">{agent.role}</div>
                     </div>
                     <div className="flex flex-1 gap-1">
                       {[1, 2, 3, 4].map((p) => (
@@ -177,7 +183,7 @@ export function TeamDashboard() {
                 {phases.map((p) => (
                   <div
                     key={p.id}
-                    className="flex-1 text-center text-xs text-muted"
+                    className="text-muted flex-1 text-center text-xs"
                   >
                     {p.quarter}
                   </div>
@@ -187,26 +193,26 @@ export function TeamDashboard() {
           )}
 
           {view === "matrix" && (
-            <div className="overflow-hidden rounded-lg border border-border">
+            <div className="border-border overflow-hidden rounded-lg border">
               <table className="w-full text-xs">
                 <thead>
                   <tr className="bg-surface">
-                    <th className="p-2 text-left font-medium text-muted">
+                    <th className="text-muted p-2 text-left font-medium">
                       Agent
                     </th>
-                    <th className="p-2 text-left font-medium text-muted">
+                    <th className="text-muted p-2 text-left font-medium">
                       Primary Skills
                     </th>
-                    <th className="p-2 text-center font-medium text-muted">
+                    <th className="text-muted p-2 text-center font-medium">
                       Q1
                     </th>
-                    <th className="p-2 text-center font-medium text-muted">
+                    <th className="text-muted p-2 text-center font-medium">
                       Q2
                     </th>
-                    <th className="p-2 text-center font-medium text-muted">
+                    <th className="text-muted p-2 text-center font-medium">
                       Q3
                     </th>
-                    <th className="p-2 text-center font-medium text-muted">
+                    <th className="text-muted p-2 text-center font-medium">
                       Q4
                     </th>
                   </tr>
@@ -216,7 +222,7 @@ export function TeamDashboard() {
                     <tr
                       key={agent.id}
                       onClick={() => setSelectedAgent(agent)}
-                      className={`cursor-pointer border-t border-border transition-colors ${
+                      className={`border-border cursor-pointer border-t transition-colors ${
                         selectedAgent?.id === agent.id
                           ? "bg-surface-elevated"
                           : "hover:bg-surface"
@@ -228,26 +234,28 @@ export function TeamDashboard() {
                             className="h-2 w-2 rounded-full"
                             style={{ backgroundColor: agent.color }}
                           />
-                          <span className="font-medium text-foreground">
+                          <span className="text-foreground font-medium">
                             {agent.name}
                           </span>
                         </div>
                       </td>
-                      <td className="p-2 text-muted">
+                      <td className="text-muted p-2">
                         {agent.skills.slice(0, 3).join(", ")}
                       </td>
                       {[1, 2, 3, 4].map((p) => (
                         <td key={p} className="p-2 text-center">
                           <span
                             className={`inline-block w-10 rounded py-0.5 text-xs font-medium ${
-                              (agent[`phase${p}` as keyof Agent] as number) >= 80
+                              (agent[`phase${p}` as keyof Agent] as number) >=
+                              80
                                 ? "bg-opacity-30"
                                 : "bg-opacity-10"
                             }`}
                             style={{
                               backgroundColor: `${agent.color}30`,
                               color:
-                                (agent[`phase${p}` as keyof Agent] as number) >= 80
+                                (agent[`phase${p}` as keyof Agent] as number) >=
+                                80
                                   ? agent.color
                                   : `${agent.color}80`,
                             }}
@@ -267,10 +275,14 @@ export function TeamDashboard() {
         {/* Detail Panel */}
         <div className="w-80 shrink-0">
           {selectedAgent ? (
-            <AgentDetail agent={selectedAgent} phases={phases} agents={agents} />
+            <AgentDetail
+              agent={selectedAgent}
+              phases={phases}
+              agents={agents}
+            />
           ) : (
-            <div className="rounded-lg border border-border bg-surface p-8 text-center">
-              <p className="text-sm text-muted">
+            <div className="border-border bg-surface rounded-lg border p-8 text-center">
+              <p className="text-muted text-sm">
                 Select an agent to view details
               </p>
             </div>

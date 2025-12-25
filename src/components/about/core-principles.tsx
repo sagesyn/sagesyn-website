@@ -23,10 +23,10 @@ export function CorePrinciples() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-display text-foreground text-3xl font-bold tracking-tight sm:text-4xl">
             Core Principles
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="text-muted mt-4 text-lg">
             The foundational values that guide everything we build
           </p>
         </div>
@@ -38,20 +38,20 @@ export function CorePrinciples() {
             return (
               <div
                 key={principle.id}
-                className="group relative rounded-2xl border border-border bg-background p-6 transition-all hover:border-brand-cyan/50 hover:shadow-lg hover:shadow-brand-cyan/5"
+                className="group border-border bg-background hover:border-brand-cyan/50 hover:shadow-brand-cyan/5 relative rounded-2xl border p-6 transition-all hover:shadow-lg"
               >
                 {/* Icon */}
-                <div className="mb-4 inline-flex rounded-lg bg-brand-gradient p-3">
+                <div className="bg-brand-gradient mb-4 inline-flex rounded-lg p-3">
                   <Icon className="h-6 w-6 text-white" />
                 </div>
 
                 {/* Title */}
-                <h3 className="font-display text-lg font-semibold text-foreground">
+                <h3 className="font-display text-foreground text-lg font-semibold">
                   {principle.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 text-sm leading-6 text-muted">
+                <p className="text-muted mt-2 text-sm leading-6">
                   {principle.description}
                 </p>
               </div>

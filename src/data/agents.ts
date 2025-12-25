@@ -27,7 +27,12 @@ export const agents: Agent[] = [
     role: "Orchestrator",
     scope: "Project coordination, sprint planning, decision making",
     color: "#f59e0b",
-    skills: ["Planning", "Coordination", "Architecture Decisions", "Risk Management"],
+    skills: [
+      "Planning",
+      "Coordination",
+      "Architecture Decisions",
+      "Risk Management",
+    ],
     phase1: 100,
     phase2: 100,
     phase3: 100,
@@ -117,7 +122,12 @@ export const agents: Agent[] = [
     phase3: 100,
     phase4: 80,
     collaborates: ["rust", "canvas", "forge"],
-    outputs: ["Protocol adapters", "MCP servers", "A2A cards", "Compliance tests"],
+    outputs: [
+      "Protocol adapters",
+      "MCP servers",
+      "A2A cards",
+      "Compliance tests",
+    ],
   },
   {
     id: "sentinel",
@@ -150,10 +160,30 @@ export const agents: Agent[] = [
 ];
 
 export const phases: Phase[] = [
-  { id: 1, name: "Foundation", quarter: "Q1 2026", focus: "Core shell, visual canvas MVP" },
-  { id: 2, name: "Multi-Model", quarter: "Q2 2026", focus: "Model gateway, context, MCP" },
-  { id: 3, name: "Advanced", quarter: "Q3 2026", focus: "Debugging, monitoring, A2A" },
-  { id: 4, name: "Enterprise", quarter: "Q4 2026", focus: "Auth, plugins, ecosystem" },
+  {
+    id: 1,
+    name: "Foundation",
+    quarter: "Q1 2026",
+    focus: "Core shell, visual canvas MVP",
+  },
+  {
+    id: 2,
+    name: "Multi-Model",
+    quarter: "Q2 2026",
+    focus: "Model gateway, context, MCP",
+  },
+  {
+    id: 3,
+    name: "Advanced",
+    quarter: "Q3 2026",
+    focus: "Debugging, monitoring, A2A",
+  },
+  {
+    id: 4,
+    name: "Enterprise",
+    quarter: "Q4 2026",
+    focus: "Auth, plugins, ecosystem",
+  },
 ];
 
 export const getAgentById = (id: string): Agent | undefined => {

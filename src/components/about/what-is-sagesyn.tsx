@@ -7,10 +7,10 @@ export function WhatIsSageSyn() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-display text-foreground text-3xl font-bold tracking-tight sm:text-4xl">
             What is SageSyn?
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="text-muted mt-4 text-lg">
             Understanding what we are—and what we&apos;re not
           </p>
         </div>
@@ -18,19 +18,19 @@ export function WhatIsSageSyn() {
         {/* Comparison grid */}
         <div className="mx-auto mt-16 grid max-w-4xl gap-8 lg:grid-cols-2">
           {/* What SageSyn IS */}
-          <div className="rounded-2xl border border-brand-cyan/30 bg-brand-cyan/5 p-8">
+          <div className="border-brand-cyan/30 bg-brand-cyan/5 rounded-2xl border p-8">
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-cyan/20">
-                <Check className="h-5 w-5 text-brand-cyan" />
+              <div className="bg-brand-cyan/20 flex h-10 w-10 items-center justify-center rounded-full">
+                <Check className="text-brand-cyan h-5 w-5" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground">
+              <h3 className="font-display text-foreground text-xl font-semibold">
                 SageSyn IS
               </h3>
             </div>
             <ul className="space-y-4">
               {whatIsSageSyn.is.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-brand-cyan" />
+                  <Check className="text-brand-cyan mt-0.5 h-5 w-5 shrink-0" />
                   <span className="text-foreground">{item}</span>
                 </li>
               ))}
@@ -38,19 +38,19 @@ export function WhatIsSageSyn() {
           </div>
 
           {/* What SageSyn IS NOT */}
-          <div className="rounded-2xl border border-destructive/30 bg-destructive/5 p-8">
+          <div className="border-destructive/30 bg-destructive/5 rounded-2xl border p-8">
             <div className="mb-6 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-destructive/20">
-                <X className="h-5 w-5 text-destructive" />
+              <div className="bg-destructive/20 flex h-10 w-10 items-center justify-center rounded-full">
+                <X className="text-destructive h-5 w-5" />
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground">
+              <h3 className="font-display text-foreground text-xl font-semibold">
                 SageSyn is NOT
               </h3>
             </div>
             <ul className="space-y-4">
               {whatIsSageSyn.isNot.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <X className="mt-0.5 h-5 w-5 shrink-0 text-destructive" />
+                  <X className="text-destructive mt-0.5 h-5 w-5 shrink-0" />
                   <span className="text-muted">{item}</span>
                 </li>
               ))}

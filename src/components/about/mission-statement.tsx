@@ -8,15 +8,15 @@ export function MissionStatement() {
         <div className="mx-auto max-w-3xl">
           {/* Section header */}
           <div className="text-center">
-            <h2 className="font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="font-display text-foreground text-3xl font-bold tracking-tight sm:text-4xl">
               Our Mission
             </h2>
           </div>
 
           {/* Mission statement */}
-          <div className="mt-12 rounded-2xl border border-border bg-surface p-8 sm:p-12">
+          <div className="border-border bg-surface mt-12 rounded-2xl border p-8 sm:p-12">
             <blockquote className="text-center">
-              <p className="text-xl font-medium leading-8 text-foreground sm:text-2xl">
+              <p className="text-foreground text-xl leading-8 font-medium sm:text-2xl">
                 &ldquo;{missionStatement.statement}&rdquo;
               </p>
             </blockquote>
@@ -24,19 +24,19 @@ export function MissionStatement() {
 
           {/* Pillars */}
           <div className="mt-12">
-            <h3 className="text-center text-lg font-semibold text-foreground">
+            <h3 className="text-foreground text-center text-lg font-semibold">
               Core Pillars
             </h3>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2">
               {missionStatement.pillars.map((pillar, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-surface-elevated px-4 py-3"
+                  className="border-border bg-surface-elevated flex items-center gap-3 rounded-lg border px-4 py-3"
                 >
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-cyan/10">
-                    <Check className="h-4 w-4 text-brand-cyan" />
+                  <div className="bg-brand-cyan/10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
+                    <Check className="text-brand-cyan h-4 w-4" />
                   </div>
-                  <span className="text-sm text-foreground">{pillar}</span>
+                  <span className="text-foreground text-sm">{pillar}</span>
                 </li>
               ))}
             </ul>

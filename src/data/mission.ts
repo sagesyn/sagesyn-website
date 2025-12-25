@@ -123,8 +123,7 @@ export const coreFeatures: Feature[] = [
   {
     id: "code-editor",
     title: "Integrated Code Editor",
-    description:
-      "Monaco-powered editor with full LSP support for agent code.",
+    description: "Monaco-powered editor with full LSP support for agent code.",
     details: [
       "Syntax highlighting for Python, TypeScript, YAML",
       "IntelliSense and autocomplete",
@@ -166,8 +165,7 @@ export const protocols: Protocol[] = [
     id: "mcp",
     name: "MCP",
     fullName: "Model Context Protocol",
-    description:
-      "The standard for tool and data integration with AI models.",
+    description: "The standard for tool and data integration with AI models.",
     purpose:
       "Connect agents to external tools, databases, and services through a unified protocol.",
   },
@@ -184,10 +182,8 @@ export const protocols: Protocol[] = [
     id: "ag-ui",
     name: "AG-UI",
     fullName: "Agent-User Interface Protocol",
-    description:
-      "Standardized events for agent-to-frontend communication.",
-    purpose:
-      "Create rich, real-time user interfaces for agent interactions.",
+    description: "Standardized events for agent-to-frontend communication.",
+    purpose: "Create rich, real-time user interfaces for agent interactions.",
   },
 ];
 
@@ -203,11 +199,7 @@ export const techStack = {
 export const openSourceInfo = {
   license: "Apache 2.0",
   repository: "github.com/sagesyn/sagesyn",
-  community: [
-    "GitHub Discussions",
-    "Discord Community",
-    "Weekly Office Hours",
-  ],
+  community: ["GitHub Discussions", "Discord Community", "Weekly Office Hours"],
   contributing: {
     codeContributions: true,
     documentation: true,

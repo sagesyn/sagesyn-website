@@ -31,9 +31,9 @@ export function PhaseSelector({
             >
               Phase {phase.id}: {phase.name}
             </span>
-            <span className="text-xs text-muted">{phase.quarter}</span>
+            <span className="text-muted text-xs">{phase.quarter}</span>
           </div>
-          <p className="text-xs text-muted">{phase.focus}</p>
+          <p className="text-muted text-xs">{phase.focus}</p>
         </button>
       ))}
     </div>

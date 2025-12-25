@@ -11,10 +11,10 @@ export function TeamStats() {
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-lg border border-border bg-surface p-4"
+          className="border-border bg-surface rounded-lg border p-4"
         >
           <div className={`text-2xl font-bold ${stat.color}`}>{stat.value}</div>
-          <div className="text-xs text-muted">{stat.label}</div>
+          <div className="text-muted text-xs">{stat.label}</div>
         </div>
       ))}
     </div>
