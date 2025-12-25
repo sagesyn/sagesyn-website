@@ -6,11 +6,11 @@ import { TeamDashboard } from "@/components/team";
 export const metadata: Metadata = {
   title: "Team | SageSyn - Agentic Development Team",
   description:
-    "Meet the SageSyn agentic team: 9 specialized AI agents working together to build the next generation of agent infrastructure.",
+    "Meet the SageSyn agentic team: 13 specialized AI agents working together to build the next generation of agent infrastructure.",
   openGraph: {
     title: "SageSyn Agentic Team",
     description:
-      "9 specialized AI agents working together to build the next generation of agent infrastructure.",
+      "13 specialized AI agents working together to build the next generation of agent infrastructure.",
   },
 };
 

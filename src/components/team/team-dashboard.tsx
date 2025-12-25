@@ -32,7 +32,7 @@ export function TeamDashboard() {
             SageSyn Agentic Team
           </h2>
           <p className="text-muted text-sm">
-            8 specialized agents + 1 orchestrator
+            12 specialized agents + 1 orchestrator
           </p>
         </div>
         <div className="border-border bg-surface flex gap-1 rounded-lg border p-1">
