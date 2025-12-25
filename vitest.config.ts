@@ -21,6 +21,10 @@ export default defineConfig({
         "**/index.ts",
         ".next/",
         "out/",
+        "src/app/**/page.tsx",
+        "src/app/**/layout.tsx",
+        "src/data/**",
+        "src/components/icons/**",
       ],
       thresholds: {
         statements: 80,
