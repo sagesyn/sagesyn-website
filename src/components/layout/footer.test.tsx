@@ -11,7 +11,7 @@ describe("Footer component", () => {
   it("renders company description", () => {
     render(<Footer />);
     expect(
-      screen.getByText(/building the next generation of agent infrastructure/i)
+      screen.getByText(/The Decision Fabric for Intelligent Systems/i)
     ).toBeInTheDocument();
   });
 
@@ -34,7 +34,7 @@ describe("Footer component", () => {
     render(<Footer />);
     expect(screen.getByText("Company")).toBeInTheDocument();
     expect(screen.getByText("About")).toBeInTheDocument();
-    expect(screen.getByText("Careers")).toBeInTheDocument();
+    expect(screen.getByText("Team")).toBeInTheDocument();
     expect(screen.getByText("Contact")).toBeInTheDocument();
   });
 

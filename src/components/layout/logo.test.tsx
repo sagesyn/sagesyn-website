@@ -19,7 +19,7 @@ describe("Logo component", () => {
     render(<Logo />);
     const svg = document.querySelector("svg");
     expect(svg).toBeInTheDocument();
-    expect(svg).toHaveAttribute("viewBox", "0 0 40 40");
+    expect(svg).toHaveAttribute("viewBox", "0 0 200 200");
   });
 
   it("applies custom className", () => {
@@ -30,14 +30,14 @@ describe("Logo component", () => {
 
   it("contains gradient definition for logo", () => {
     render(<Logo />);
-    const gradient = document.querySelector("#logoGradient");
+    const gradient = document.querySelector("#fabricGradient");
     expect(gradient).toBeInTheDocument();
   });
 
   it("renders agent nodes in the mesh", () => {
     render(<Logo />);
     const circles = document.querySelectorAll("circle");
-    // 1 center node + 6 outer nodes = 7 total
-    expect(circles.length).toBe(7);
+    // 6 outer nodes + 1 central orchestrator + 1 inner white circle = 8 total
+    expect(circles.length).toBe(8);
   });
 });

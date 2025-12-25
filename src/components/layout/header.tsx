@@ -7,9 +7,10 @@ import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 
 const navigation = [
+  { name: "About", href: "/about" },
+  { name: "Team", href: "/team" },
+  { name: "Roadmap", href: "/roadmap" },
   { name: "Docs", href: "/docs" },
-  { name: "API Reference", href: "/api-reference" },
-  { name: "Changelog", href: "/changelog" },
 ];
 
 export function Header() {
@@ -63,7 +64,7 @@ export function Header() {
           </Link>
           <Link
             href="/docs/getting-started"
-            className="bg-neon-cyan text-background hover:shadow-glow-cyan rounded-lg px-4 py-2 text-sm font-semibold transition-all"
+            className="bg-brand-gradient hover:shadow-glow-cyan rounded-lg px-4 py-2 text-sm font-semibold text-white transition-all"
           >
             Get Started
           </Link>
@@ -126,7 +127,7 @@ export function Header() {
                 </Link>
                 <Link
                   href="/docs/getting-started"
-                  className="bg-neon-cyan text-background mt-4 block rounded-lg px-4 py-3 text-center text-sm font-semibold"
+                  className="bg-brand-gradient mt-4 block rounded-lg px-4 py-3 text-center text-sm font-semibold text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Started

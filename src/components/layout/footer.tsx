@@ -17,9 +17,9 @@ const footerLinks = {
   ],
   company: [
     { name: "About", href: "/about" },
-    { name: "Careers", href: "/careers" },
+    { name: "Team", href: "/team" },
+    { name: "Roadmap", href: "/roadmap" },
     { name: "Contact", href: "/contact" },
-    { name: "Press", href: "/press" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -47,8 +47,8 @@ export function Footer() {
           <div className="space-y-8">
             <Logo />
             <p className="text-muted max-w-xs text-sm leading-6">
-              Building the next generation of agent infrastructure - layered,
-              observable, and safe.
+              The Decision Fabric for Intelligent Systems. Open source
+              multi-agent framework infrastructure.
             </p>
             <div className="flex space-x-6">
               {socialLinks.map((item) => (

@@ -10,9 +10,10 @@ describe("Header component", () => {
 
   it("renders navigation links", () => {
     render(<Header />);
+    expect(screen.getAllByText("About").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Team").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Roadmap").length).toBeGreaterThan(0);
     expect(screen.getAllByText("Docs").length).toBeGreaterThan(0);
-    expect(screen.getAllByText("API Reference").length).toBeGreaterThan(0);
-    expect(screen.getAllByText("Changelog").length).toBeGreaterThan(0);
   });
 
   it("renders Get Started button", () => {
