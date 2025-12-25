@@ -1,8 +1,9 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
+import { IDEPreview } from "@/components/home/ide-preview";
 import { ValueProps } from "@/components/home/value-props";
-import { CodeShowcase } from "@/components/home/code-showcase";
+import { AgentLanguageShowcase } from "@/components/home/agent-language-showcase";
 import { TerminalDemo } from "@/components/home/terminal-demo";
 import { CTASection } from "@/components/home/cta-section";
 
@@ -20,8 +21,9 @@ export default function HomePage() {
         <Header />
         <main>
           <Hero />
+          <IDEPreview />
           <ValueProps />
-          <CodeShowcase />
+          <AgentLanguageShowcase />
           <TerminalDemo />
           <CTASection />
         </main>

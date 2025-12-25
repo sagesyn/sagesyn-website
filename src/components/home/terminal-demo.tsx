@@ -4,37 +4,40 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const demoLines = [
-  { type: "command", content: "sagesyn deploy --mesh production" },
-  { type: "output", content: "Deploying agents to production mesh..." },
-  { type: "success", content: "✓ researcher-agent deployed" },
-  { type: "success", content: "✓ planner-agent deployed" },
-  { type: "success", content: "✓ executor-agent deployed" },
+  {
+    type: "command",
+    content: "sagesyn compile research.ssag --target typescript",
+  },
+  { type: "output", content: "Compiling research.ssag..." },
+  { type: "success", content: "✓ Parsed agent definition" },
+  { type: "success", content: "✓ Validated MCP server references" },
+  { type: "success", content: "✓ Generated dist/research-agent.ts" },
   { type: "output", content: "" },
-  { type: "command", content: "sagesyn mesh status" },
+  { type: "command", content: "sagesyn lsp --check" },
   { type: "output", content: "" },
   {
     type: "table",
     content: [
-      "AGENT            STATUS    LATENCY   REQUESTS",
-      "researcher       healthy   12ms      1,247",
-      "planner          healthy   8ms       892",
-      "executor         healthy   15ms      634",
+      "DIAGNOSTICS     COUNT    STATUS",
+      "errors          0        pass",
+      "warnings        1        info",
+      "hints           3        info",
     ],
   },
   { type: "output", content: "" },
   {
     type: "command",
-    content: "sagesyn run --agent researcher 'Find latest AI papers'",
+    content: 'sagesyn run research.ssag --input "Find AI papers"',
   },
   { type: "output", content: "" },
-  { type: "info", content: "[researcher] Perceiving input..." },
+  { type: "info", content: "[research] Perceiving input..." },
   {
     type: "info",
-    content: "[researcher] Reasoning with context (depth: 3)...",
+    content: "[research] Reasoning with context (depth: 3)...",
   },
   {
     type: "info",
-    content: "[researcher] Executing plan with tools: [web_search, arxiv]",
+    content: "[research] Executing tools: [brave_search, arxiv]",
   },
   { type: "output", content: "" },
   { type: "result", content: "Found 12 relevant papers from arxiv.org" },
@@ -74,26 +77,26 @@ export function TerminalDemo() {
   }, [visibleLines]);
 
   return (
-    <section className="relative py-24 sm:py-32">
+    <section className="relative py-12 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Content */}
           <div>
             <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-              Observe <span className="gradient-text">everything</span>
+              Compile, check, <span className="gradient-text">run</span>
             </h2>
             <p className="text-muted mt-4 text-lg">
-              Full visibility into your agent mesh. Track requests, latency, and
-              decisions in real-time. Debug complex multi-agent workflows with
-              ease.
+              The sagesyn CLI compiles your .ssag files to production code,
+              validates with the LSP, and runs agents directly. Full debugging
+              with source maps.
             </p>
 
             <ul className="mt-8 space-y-4">
               {[
-                "Real-time metrics and health monitoring",
-                "Trace requests across agent boundaries",
-                "Audit logs for every decision made",
-                "Alert on anomalies and failures",
+                "Compile to TypeScript, Python, or Go",
+                "LSP diagnostics from the command line",
+                "Run agents locally or in the cloud",
+                "Debug with source maps back to .ssag",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm">
                   <span className="bg-neon-cyan inline-block h-1.5 w-1.5 rounded-full" />

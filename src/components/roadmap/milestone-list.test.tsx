@@ -26,9 +26,9 @@ describe("MilestoneList component", () => {
     render(<MilestoneList milestones={mockMilestones} />);
 
     // Each milestone has a name element
-    expect(screen.getByText("Desktop Shell MVP")).toBeInTheDocument();
-    expect(screen.getByText("Visual Canvas Core")).toBeInTheDocument();
-    expect(screen.getByText("Local Model Support")).toBeInTheDocument();
-    expect(screen.getByText("Basic Workflow Execution")).toBeInTheDocument();
+    expect(screen.getByText("Language Specification")).toBeInTheDocument();
+    expect(screen.getByText("Parser & AST")).toBeInTheDocument();
+    expect(screen.getByText("TypeScript Compiler")).toBeInTheDocument();
+    expect(screen.getByText("LSP Core")).toBeInTheDocument();
   });
 });

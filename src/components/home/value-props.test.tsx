@@ -5,38 +5,40 @@ import { ValueProps } from "./value-props";
 describe("ValueProps component", () => {
   it("renders section headline", () => {
     render(<ValueProps />);
-    expect(screen.getByText(/infrastructure for the/i)).toBeInTheDocument();
-    expect(screen.getByText(/agentic era/i)).toBeInTheDocument();
+    expect(screen.getByText(/agents as/i)).toBeInTheDocument();
+    expect(screen.getByText(/first-class citizens/i)).toBeInTheDocument();
   });
 
   it("renders section description", () => {
     render(<ValueProps />);
     expect(
-      screen.getByText(/stop treating agents as ad-hoc scripts/i)
+      screen.getByText(
+        /a purpose-built language for defining intelligent agents/i
+      )
     ).toBeInTheDocument();
   });
 
-  it("renders Agent Mesh feature", () => {
+  it("renders Declarative Syntax feature", () => {
     render(<ValueProps />);
-    expect(screen.getByText("Agent Mesh")).toBeInTheDocument();
+    expect(screen.getByText("Declarative Syntax")).toBeInTheDocument();
     expect(
-      screen.getByText(/treat agents like microservices/i)
+      screen.getByText(/define agents in clean, yaml-like syntax/i)
     ).toBeInTheDocument();
   });
 
-  it("renders Layered Cognition feature", () => {
+  it("renders Multi-Target Compilation feature", () => {
     render(<ValueProps />);
-    expect(screen.getByText("Layered Cognition")).toBeInTheDocument();
+    expect(screen.getByText("Multi-Target Compilation")).toBeInTheDocument();
     expect(
-      screen.getByText(/structure workflows into stages/i)
+      screen.getByText(/write once, compile to typescript, python, or go/i)
     ).toBeInTheDocument();
   });
 
-  it("renders Protocol Native feature", () => {
+  it("renders LSP-Powered Editing feature", () => {
     render(<ValueProps />);
-    expect(screen.getByText("Protocol Native")).toBeInTheDocument();
+    expect(screen.getByText("LSP-Powered Editing")).toBeInTheDocument();
     expect(
-      screen.getByText(/designed to speak modern agent protocols/i)
+      screen.getByText(/full language server protocol support/i)
     ).toBeInTheDocument();
   });
 

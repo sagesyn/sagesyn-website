@@ -6,14 +6,14 @@ describe("HeroAbout component", () => {
   it("renders the tagline", () => {
     render(<HeroAbout />);
     expect(
-      screen.getByText("The Decision Fabric for Intelligent Systems")
+      screen.getByText("The Agent Programming Language")
     ).toBeInTheDocument();
   });
 
   it("renders the main headline", () => {
     render(<HeroAbout />);
     expect(
-      screen.getByText("Visual IDE for Building AI Agents")
+      screen.getByText("Define Agents. Compile to Any Language.")
     ).toBeInTheDocument();
   });
 
@@ -27,7 +27,7 @@ describe("HeroAbout component", () => {
   it("renders the positioning statement", () => {
     render(<HeroAbout />);
     expect(
-      screen.getByText("Visual Studio Code meets Node-RED for agents")
+      screen.getByText("TypeScript is to JavaScript as .ssag is to agent SDKs")
     ).toBeInTheDocument();
   });
 });

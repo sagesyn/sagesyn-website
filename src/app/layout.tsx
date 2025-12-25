@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     default: "SageSyn - The Decision Fabric for Intelligent Systems",
     template: "%s | SageSyn",
   },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   description:
     "SageSyn builds futuristic agent infrastructure - a coordinated layer where intelligent agents, tools, and data work together as a stable decision fabric for modern systems.",
   keywords: [

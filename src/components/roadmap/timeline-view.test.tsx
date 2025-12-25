@@ -6,26 +6,30 @@ describe("TimelineView component", () => {
   it("renders all four phases", () => {
     render(<TimelineView />);
 
-    expect(screen.getByText("Phase 1: Foundation")).toBeInTheDocument();
     expect(
-      screen.getByText("Phase 2: Multi-Model & Tools")
+      screen.getByText("Phase 1: Language Foundation")
     ).toBeInTheDocument();
-    expect(screen.getByText("Phase 3: Advanced Features")).toBeInTheDocument();
+    expect(screen.getByText("Phase 2: Multi-Target & IDE")).toBeInTheDocument();
     expect(
-      screen.getByText("Phase 4: Enterprise & Ecosystem")
+      screen.getByText("Phase 3: Protocols & Runtime")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Phase 4: Ecosystem & Enterprise")
     ).toBeInTheDocument();
   });
 
   it("renders phase goals", () => {
     render(<TimelineView />);
 
-    expect(screen.getByText("Functional Desktop IDE")).toBeInTheDocument();
     expect(
-      screen.getByText("Full Model Gateway & MCP Ecosystem")
+      screen.getByText("Core Language & TypeScript Compiler")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Python/Go Compilers & Visual IDE")
     ).toBeInTheDocument();
     expect(screen.getByText("v1.0 Stable Release")).toBeInTheDocument();
     expect(
-      screen.getByText("Enterprise Features & Plugin Ecosystem")
+      screen.getByText("Package Registry & Cloud Compilation")
     ).toBeInTheDocument();
   });
 
