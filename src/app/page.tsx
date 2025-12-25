@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/home/hero";
 import { ValueProps } from "@/components/home/value-props";
+import { IDEPreview } from "@/components/home/ide-preview";
 import { CodeShowcase } from "@/components/home/code-showcase";
 import { TerminalDemo } from "@/components/home/terminal-demo";
 import { CTASection } from "@/components/home/cta-section";
@@ -21,6 +22,7 @@ export default function HomePage() {
         <main>
           <Hero />
           <ValueProps />
+          <IDEPreview />
           <CodeShowcase />
           <TerminalDemo />
           <CTASection />
