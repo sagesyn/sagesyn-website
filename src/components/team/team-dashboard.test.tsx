@@ -11,7 +11,7 @@ describe("TeamDashboard component", () => {
   it("renders agent count description", () => {
     render(<TeamDashboard />);
     expect(
-      screen.getByText("8 specialized agents + 1 orchestrator")
+      screen.getByText("12 specialized agents + 1 orchestrator")
     ).toBeInTheDocument();
   });
 
@@ -34,6 +34,10 @@ describe("TeamDashboard component", () => {
     expect(screen.getByText("BRIDGE")).toBeInTheDocument();
     expect(screen.getByText("SENTINEL")).toBeInTheDocument();
     expect(screen.getByText("PIPELINE")).toBeInTheDocument();
+    expect(screen.getByText("SCRIBE")).toBeInTheDocument();
+    expect(screen.getByText("NEXUS")).toBeInTheDocument();
+    expect(screen.getByText("VAULT")).toBeInTheDocument();
+    expect(screen.getByText("HERALD")).toBeInTheDocument();
   });
 
   it("renders view mode toggle", () => {
