@@ -36,14 +36,14 @@ describe("Hero component", () => {
   it("renders terminal preview", () => {
     render(<Hero />);
     expect(
-      screen.getByText(/sagesyn init research-assistant.ssag/i)
+      screen.getByText(/sagesyn init research-assistant.sag/i)
     ).toBeInTheDocument();
   });
 
   it("renders terminal output steps", () => {
     render(<Hero />);
     expect(
-      screen.getByText(/created research-assistant.ssag/i)
+      screen.getByText(/created research-assistant.sag/i)
     ).toBeInTheDocument();
     expect(screen.getByText(/configured mcp servers/i)).toBeInTheDocument();
     expect(screen.getByText(/lsp ready/i)).toBeInTheDocument();
@@ -52,7 +52,7 @@ describe("Hero component", () => {
   it("renders compile command in terminal", () => {
     render(<Hero />);
     expect(
-      screen.getByText(/sagesyn compile --target typescript/i)
+      screen.getByText(/sag compile --target typescript/i)
     ).toBeInTheDocument();
   });
 

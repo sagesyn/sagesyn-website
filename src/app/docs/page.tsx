@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: "Documentation",
   description:
-    "Learn how to use the SageSyn Agent Programming Language to define, compile, and run intelligent agents.",
+    "Learn how to use the Sage Agent Programming Language to define, compile, and run intelligent agents.",
 };
 
 const agentExample = `agent: hello_world
@@ -33,7 +33,7 @@ workflow:
 const quickLinks = [
   {
     title: "Language Reference",
-    description: "Complete syntax reference for .ssag files",
+    description: "Complete syntax reference for .sag files",
     icon: FileCode,
     href: "#language-reference",
     gradient: "from-neon-cyan to-neon-blue",
@@ -130,12 +130,12 @@ export default function DocsPage() {
                   <div className="bg-surface-elevated overflow-x-auto rounded-lg p-4">
                     <pre className="font-mono text-sm">
                       <code className="text-foreground/90">
-                        sagesyn init hello.ssag
+                        sagesyn init hello.sag
                       </code>
                     </pre>
                   </div>
                   <p className="text-muted mt-4 text-sm">
-                    This creates a new .ssag file with a basic template:
+                    This creates a new .sag file with a basic template:
                   </p>
                   <div className="bg-surface-elevated mt-4 overflow-x-auto rounded-lg p-4">
                     <pre className="font-mono text-sm">
@@ -157,10 +157,10 @@ export default function DocsPage() {
                   <div className="bg-surface-elevated overflow-x-auto rounded-lg p-4">
                     <pre className="font-mono text-sm">
                       <code className="text-foreground/90">
-                        # Compile to TypeScript{"\n"}sagesyn compile hello.ssag
+                        # Compile to TypeScript{"\n"}sag compile hello.sag
                         --target typescript{"\n\n"}# Compile to Python{"\n"}
-                        sagesyn compile hello.ssag --target python{"\n\n"}#
-                        Compile to Go{"\n"}sagesyn compile hello.ssag --target
+                        sag compile hello.sag --target python{"\n\n"}#
+                        Compile to Go{"\n"}sag compile hello.sag --target
                         go
                       </code>
                     </pre>
@@ -180,7 +180,7 @@ export default function DocsPage() {
                   <div className="bg-surface-elevated overflow-x-auto rounded-lg p-4">
                     <pre className="font-mono text-sm">
                       <code className="text-foreground/90">
-                        sagesyn run hello.ssag --input &quot;Hello, world!&quot;
+                        sag run hello.sag --input &quot;Hello, world!&quot;
                       </code>
                     </pre>
                   </div>

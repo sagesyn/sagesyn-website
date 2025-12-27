@@ -19,7 +19,7 @@ export function CTASection() {
 
             <div className="relative mx-auto max-w-2xl text-center">
               <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-                Start writing <span className="gradient-text">.ssag</span> today
+                Start writing <span className="gradient-text">.sag</span> today
               </h2>
               <p className="text-muted mt-4 text-lg">
                 Define agents in a declarative language. Compile to any target.

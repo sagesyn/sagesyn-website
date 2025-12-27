@@ -27,7 +27,7 @@ describe("HeroAbout component", () => {
   it("renders the positioning statement", () => {
     render(<HeroAbout />);
     expect(
-      screen.getByText("TypeScript is to JavaScript as .ssag is to agent SDKs")
+      screen.getByText("TypeScript is to JavaScript as .sag is to agent SDKs")
     ).toBeInTheDocument();
   });
 });

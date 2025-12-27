@@ -20,7 +20,7 @@ describe("IDEPreview", () => {
     render(<IDEPreview />);
     expect(screen.getByText("sagesyn")).toBeInTheDocument();
     expect(
-      screen.getByText("~/projects/research-assistant.ssag")
+      screen.getByText("~/projects/research-assistant.sag")
     ).toBeInTheDocument();
   });
 
@@ -50,7 +50,7 @@ describe("IDEPreview", () => {
     render(<IDEPreview />);
     fireEvent.click(screen.getByText("code"));
     expect(
-      screen.getByText(/SageSyn Agent Programming Language/)
+      screen.getByText(/Sage Agent Programming Language/)
     ).toBeInTheDocument();
   });
 
