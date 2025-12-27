@@ -366,7 +366,7 @@ export function IDEPreview() {
                   sagesyn
                 </span>
                 <span className="text-xs text-neutral-600">
-                  ~/projects/research-assistant.ssag
+                  ~/projects/research-assistant.sag
                 </span>
               </div>
               <div className="flex items-center gap-3 text-xs">
@@ -630,8 +630,8 @@ export function IDEPreview() {
                     <div className="p-4 text-xs leading-relaxed">
                       <pre className="text-neutral-400">
                         <code>
-                          {`# research-assistant.ssag
-# SageSyn Agent Programming Language
+                          {`# research-assistant.sag
+# Sage Agent Programming Language
 
 agent: research_assistant
 version: 1.0

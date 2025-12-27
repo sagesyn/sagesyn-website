@@ -6,7 +6,9 @@ describe("CTASection component", () => {
   it("renders headline", () => {
     render(<CTASection />);
     expect(screen.getByText(/start writing/i)).toBeInTheDocument();
-    expect(screen.getByText(/.ssag/i)).toBeInTheDocument();
+    // Use getAllByText since ".sag" matches both the headline and "sagesyn.ai" email
+    const sagElements = screen.getAllByText(/\.sag/i);
+    expect(sagElements.length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders description", () => {

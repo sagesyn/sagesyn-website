@@ -27,7 +27,7 @@ export const roadmapPhases: RoadmapPhase[] = [
       {
         id: "1.1",
         name: "Language Specification",
-        description: "Complete .ssag syntax specification and grammar",
+        description: "Complete .sag syntax specification and grammar",
         status: "upcoming",
       },
       {
@@ -63,7 +63,7 @@ export const roadmapPhases: RoadmapPhase[] = [
     quarter: "Q2 2026",
     goal: "Python/Go Compilers & Visual IDE",
     description:
-      "Expand compilation targets to Python and Go. Launch the visual IDE for designing agent workflows with .ssag file generation.",
+      "Expand compilation targets to Python and Go. Launch the visual IDE for designing agent workflows with .sag file generation.",
     milestones: [
       {
         id: "2.1",
@@ -95,7 +95,7 @@ export const roadmapPhases: RoadmapPhase[] = [
       "Go runtime (sagesyn-go)",
       "Visual IDE with workflow designer",
       "Full LSP support in VSCode, Vim, Neovim",
-      "Live .ssag file preview",
+      "Live .sag file preview",
     ],
   },
   {
@@ -109,7 +109,7 @@ export const roadmapPhases: RoadmapPhase[] = [
       {
         id: "3.1",
         name: "MCP Primitives",
-        description: "Native MCP server declarations in .ssag files",
+        description: "Native MCP server declarations in .sag files",
         status: "upcoming",
       },
       {
@@ -145,12 +145,12 @@ export const roadmapPhases: RoadmapPhase[] = [
     quarter: "Q4 2026",
     goal: "Package Registry & Cloud Compilation",
     description:
-      "Launch the agent package registry for sharing .ssag modules. Cloud compilation service for CI/CD integration.",
+      "Launch the agent package registry for sharing .sag modules. Cloud compilation service for CI/CD integration.",
     milestones: [
       {
         id: "4.1",
         name: "Package Registry",
-        description: "npm-like registry for .ssag modules",
+        description: "npm-like registry for .sag modules",
         status: "upcoming",
       },
       {

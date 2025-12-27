@@ -155,7 +155,7 @@ export function AgentLanguageShowcase() {
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Write <span className="gradient-text">.ssag</span>, compile to
+            Write <span className="gradient-text">.sag</span>, compile to
             anything
           </h2>
           <p className="text-muted mt-4 text-lg">
@@ -174,7 +174,7 @@ export function AgentLanguageShowcase() {
               </div>
             </div>
 
-            {/* Left: .ssag file */}
+            {/* Left: .sag file */}
             <div className="relative">
               {/* Glow */}
               <div className="from-neon-cyan/20 to-neon-blue/20 absolute -inset-4 rounded-2xl bg-gradient-to-r blur-2xl" />
@@ -189,7 +189,7 @@ export function AgentLanguageShowcase() {
                       <div className="h-3 w-3 rounded-full bg-green-500/80" />
                     </div>
                     <span className="text-muted font-mono text-sm">
-                      research-assistant.ssag
+                      research-assistant.sag
                     </span>
                   </div>
                   <button

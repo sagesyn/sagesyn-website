@@ -95,13 +95,13 @@ export function Hero() {
                   <div className="flex items-center gap-2">
                     <span className="text-neon-green">$</span>
                     <span className="text-foreground">
-                      sagesyn init research-assistant.ssag
+                      sagesyn init research-assistant.sag
                     </span>
                   </div>
                   <div className="text-muted mt-4 space-y-1">
                     <p>
                       <span className="text-neon-cyan">✓</span> Created
-                      research-assistant.ssag
+                      research-assistant.sag
                     </p>
                     <p>
                       <span className="text-neon-cyan">✓</span> Configured MCP
@@ -112,7 +112,7 @@ export function Hero() {
                       in your editor
                     </p>
                     <p className="text-neon-green">
-                      ✓ Run: sagesyn compile --target typescript
+                      ✓ Run: sag compile --target typescript
                     </p>
                   </div>
                   <div className="mt-4 flex items-center gap-2">

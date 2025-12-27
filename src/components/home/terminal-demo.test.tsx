@@ -21,7 +21,7 @@ describe("TerminalDemo component", () => {
   it("renders section description", () => {
     render(<TerminalDemo />);
     expect(
-      screen.getByText(/the sagesyn cli compiles your .ssag files/i)
+      screen.getByText(/the sagesyn cli compiles your .sag files/i)
     ).toBeInTheDocument();
   });
 

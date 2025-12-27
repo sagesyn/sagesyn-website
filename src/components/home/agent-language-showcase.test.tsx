@@ -13,7 +13,7 @@ describe("AgentLanguageShowcase component", () => {
   it("renders section headline", () => {
     render(<AgentLanguageShowcase />);
     expect(screen.getByText(/write/i)).toBeInTheDocument();
-    const ssagElements = screen.getAllByText(/.ssag/i);
+    const ssagElements = screen.getAllByText(/.sag/i);
     expect(ssagElements.length).toBeGreaterThan(0);
     expect(screen.getByText(/compile to anything/i)).toBeInTheDocument();
   });
@@ -25,9 +25,9 @@ describe("AgentLanguageShowcase component", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders .ssag file example", () => {
+  it("renders .sag file example", () => {
     render(<AgentLanguageShowcase />);
-    expect(screen.getByText("research-assistant.ssag")).toBeInTheDocument();
+    expect(screen.getByText("research-assistant.sag")).toBeInTheDocument();
   });
 
   it("renders agent code content", () => {

@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 const demoLines = [
   {
     type: "command",
-    content: "sagesyn compile research.ssag --target typescript",
+    content: "sag compile research.sag --target typescript",
   },
-  { type: "output", content: "Compiling research.ssag..." },
+  { type: "output", content: "Compiling research.sag..." },
   { type: "success", content: "✓ Parsed agent definition" },
   { type: "success", content: "✓ Validated MCP server references" },
   { type: "success", content: "✓ Generated dist/research-agent.ts" },
@@ -27,7 +27,7 @@ const demoLines = [
   { type: "output", content: "" },
   {
     type: "command",
-    content: 'sagesyn run research.ssag --input "Find AI papers"',
+    content: 'sag run research.sag --input "Find AI papers"',
   },
   { type: "output", content: "" },
   { type: "info", content: "[research] Perceiving input..." },
@@ -86,7 +86,7 @@ export function TerminalDemo() {
               Compile, check, <span className="gradient-text">run</span>
             </h2>
             <p className="text-muted mt-4 text-lg">
-              The sagesyn CLI compiles your .ssag files to production code,
+              The sagesyn CLI compiles your .sag files to production code,
               validates with the LSP, and runs agents directly. Full debugging
               with source maps.
             </p>
@@ -96,7 +96,7 @@ export function TerminalDemo() {
                 "Compile to TypeScript, Python, or Go",
                 "LSP diagnostics from the command line",
                 "Run agents locally or in the cloud",
-                "Debug with source maps back to .ssag",
+                "Debug with source maps back to .sag",
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-sm">
                   <span className="bg-neon-cyan inline-block h-1.5 w-1.5 rounded-full" />

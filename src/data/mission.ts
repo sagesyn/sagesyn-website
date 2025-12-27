@@ -26,8 +26,8 @@ export const executiveVision = {
   subheadline:
     "A declarative language for building AI agents. Write once, compile to TypeScript, Python, or Go.",
   description:
-    "SageSyn introduces the Agent Programming Language (.ssag) - a clean, YAML-like syntax for defining intelligent agents. With LSP support for VSCode, Vim, and Neovim, plus native constructs for MCP, A2A, and AG-UI protocols, agents become first-class citizens in your development workflow.",
-  positioning: "TypeScript is to JavaScript as .ssag is to agent SDKs",
+    "SageSyn introduces the Agent Programming Language (.sag) - a clean, YAML-like syntax for defining intelligent agents. With LSP support for VSCode, Vim, and Neovim, plus native constructs for MCP, A2A, and AG-UI protocols, agents become first-class citizens in your development workflow.",
+  positioning: "TypeScript is to JavaScript as .sag is to agent SDKs",
 };
 
 export const missionStatement = {
@@ -89,7 +89,7 @@ export const corePrinciples: CorePrinciple[] = [
 
 export const whatIsSageSyn = {
   is: [
-    "A programming language for defining AI agents (.ssag files)",
+    "A programming language for defining AI agents (.sag files)",
     "A multi-target compiler (TypeScript, Python, Go)",
     "An LSP server for intelligent editing",
     "A visual IDE for designing agent workflows",
@@ -124,7 +124,7 @@ export const coreFeatures: Feature[] = [
     id: "compiler",
     title: "Multi-Target Compiler",
     description:
-      "Compile .ssag files to production-ready code in any language.",
+      "Compile .sag files to production-ready code in any language.",
     details: [
       "TypeScript target with full type safety",
       "Python target for ML/AI ecosystems",
@@ -153,7 +153,7 @@ export const coreFeatures: Feature[] = [
       "Design and visualize agent workflows with an intuitive node-based interface.",
     details: [
       "Drag-and-drop workflow design",
-      "Visual representation of .ssag files",
+      "Visual representation of .sag files",
       "Real-time execution visualization",
       "Context window inspector",
       "Integrated execution logs",
@@ -168,7 +168,7 @@ export const protocols: Protocol[] = [
     fullName: "Model Context Protocol",
     description: "Define tool integrations as language constructs.",
     purpose:
-      "Connect agents to external tools, databases, and services through native syntax. MCP servers become typed dependencies in your .ssag file.",
+      "Connect agents to external tools, databases, and services through native syntax. MCP servers become typed dependencies in your .sag file.",
   },
   {
     id: "a2a",
