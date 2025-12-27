@@ -123,8 +123,7 @@ export const coreFeatures: Feature[] = [
   {
     id: "compiler",
     title: "Multi-Target Compiler",
-    description:
-      "Compile .sag files to production-ready code in any language.",
+    description: "Compile .sag files to production-ready code in any language.",
     details: [
       "TypeScript target with full type safety",
       "Python target for ML/AI ecosystems",

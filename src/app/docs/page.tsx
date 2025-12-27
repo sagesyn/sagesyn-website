@@ -159,9 +159,8 @@ export default function DocsPage() {
                       <code className="text-foreground/90">
                         # Compile to TypeScript{"\n"}sag compile hello.sag
                         --target typescript{"\n\n"}# Compile to Python{"\n"}
-                        sag compile hello.sag --target python{"\n\n"}#
-                        Compile to Go{"\n"}sag compile hello.sag --target
-                        go
+                        sag compile hello.sag --target python{"\n\n"}# Compile
+                        to Go{"\n"}sag compile hello.sag --target go
                       </code>
                     </pre>
                   </div>
